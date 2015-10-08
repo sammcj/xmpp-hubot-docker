@@ -1,0 +1,32 @@
+{
+  "name": "bot",
+  "version": "0.0.1",
+  "private": true,
+  "author": "nhoag",
+  "description": "A simple helpful robot",
+  "dependencies": {
+    "hubot": ">=2.9.3",
+    "hubot-diagnostics": ">=0.0.1",
+    "hubot-google-images": ">=0.1.1",
+    "hubot-google-translate": ">=0.1.0",
+    "hubot-help": ">=0.1.1",
+    "hubot-maps": ">=0.0.2",
+    "hubot-rules": ">=0.1.0",
+    "hubot-scripts": ">=2.5.16",
+    "hubot-shipit": ">=0.1.1",
+    "hubot-xmpp": "latest",
+    "hubot-wolfram": "latest",
+    "hubot-google": "latest",
+    "hubot-http-status": "latest",
+    "hubot-gitlab": "latest",
+    "hubot-nagios": "latest",
+    "hubot-wikipedia": "latest",
+    "hubot-wiki": "latest",
+    "hubot-watch": "latest",
+    "hubot-gitlab-ci-webhook": "latest",
+    "hubot-redmine-notifier": "latest"
+  },
+  "engines": {
+    "node": ">=0.10.x"
+  }
+}

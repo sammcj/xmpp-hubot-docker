@@ -1,0 +1,33 @@
+#!/bin/bash
+
+set -x
+
+NAME="ixbot"
+REPO="contyard.office.infoxchange.net.au/$NAME"
+TAG=`git describe`
+RAILS_ENV="production"
+
+case "$1" in
+
+  ci)
+  echo RUNNING ON `hostname`
+  echo RUNNING AS `whoami`
+  echo "Testing and releasing $REPO:$TAG"; \
+  docker build -t $REPO:$TAG .
+  echo "Successfully built $REPO:$TAG..."
+  echo "pushing..."
+  docker push $REPO:$TAG
+  ;;
+
+  deploy)
+    npm install
+  ;;
+
+  serve)
+    export PATH="node_modules/.bin:node_modules/hubot/node_modules/.bin:$PATH"
+    #export REDIS_URL="${REDIS_PORT}"
+
+    exec node_modules/.bin/hubot "$@"
+  ;;
+
+esac
